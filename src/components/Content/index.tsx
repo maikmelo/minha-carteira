@@ -1,11 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import { Container } from './styles';
 
-const Content: React.FC = () => {
+interface BaseLayoutProps {
+    children?: ReactNode;
+}
+
+const Content: React.FC<BaseLayoutProps> = ({ children }) => {
     return (
         <Container>
-            <h1>Content</h1>
+            {children}
         </Container>
     );
 }
